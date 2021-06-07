@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'ran_array', to: 'ran_array#index'
+  get 'ran_array/:id', to: 'ran_array#show'
+  post 'ran_array/:array_length', to: 'ran_array#create'
 end

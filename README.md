@@ -1,24 +1,29 @@
-# README
+# Prueba técnica de Nominapp / Back-end
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Se crearon los siguientes endpoints:
 
-Things you may want to cover:
+Crear un arreglo aleatorio:
 
-* Ruby version
+`ran_array/:array_length`
 
-* System dependencies
+En este endpoint, el **:array_length**, debe estar entre 10 y 30, por lo cual la ruta sería la siguiente:
 
-* Configuration
+http://localhost:3000/ran_array/10
 
-* Database creation
+------------
+Listar los arreglos aleatorios creados:
 
-* Database initialization
+`ran_array`
 
-* How to run the test suite
+La idea de este endpoint es que el usuario pueda consultar los arreglos de la BD, por lo cual la ruta sería la siguiente:
 
-* Services (job queues, cache servers, search engines, etc.)
+http://localhost:3000/ran_array
 
-* Deployment instructions
+------------
+Calcular y retornar el mayor rango de los números contenidos en cierto arreglo de la BD:
 
-* ...
+`ran_array/:id`
+
+En este endpoint, **:id** hace referencia al id del arreglo al que el usuario quiere obtener el rango, por lo cual la ruta sería la siguiente:
+
+http://localhost:3000/ran_array/1
