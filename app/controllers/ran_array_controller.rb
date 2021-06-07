@@ -1,5 +1,10 @@
 class RanArrayController < ApplicationController
   def index
+    arrays = RanArray.all
+    @response = arrays
+    @status = 200
+
+    render json: @response, serializer: RanArrayController, status: @status
   end
 
   def create
@@ -27,7 +32,7 @@ class RanArrayController < ApplicationController
 
     @response = "El mayor rango del arreglo es: #{return_array}"
     @status = 200
-
+    
     render json: @response, serializer: RanArrayController, status: @status
   end
 end
