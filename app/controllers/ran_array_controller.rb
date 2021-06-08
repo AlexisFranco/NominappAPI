@@ -9,6 +9,7 @@ class RanArrayController < ApplicationController
     if qty >= 10 && qty <= 30
       array = (0..30).to_a.sample(qty)
       new_array = RanArray.create! :number => array
+
       response = new_array
       status = 200
     else
